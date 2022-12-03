@@ -34,7 +34,7 @@ pipeline {
                 //  server.upload(uploadSpec) 
                 rtUpload (
                     serverId: "techino",
-                    // buildNumber: "${env.buildNumber}",
+                    buildNumber: "${env.BUILD_NUMBER}",
                     spec: """{
                         "files": [
                             {
@@ -53,7 +53,7 @@ pipeline {
                 rtPublishBuildInfo(
                     serverId: "techino",
                     buildName: "artifacttest",
-                    // buildNumber: "${buildNumber}"
+                    buildNumber: "${env.BUILD_NUMBER}"
                     
                 )
             }
