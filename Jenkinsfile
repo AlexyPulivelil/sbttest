@@ -42,7 +42,9 @@ pipeline {
                             "target": "artifacttest" 
                             }
                         ]
-                    }"""
+                    }""",
+                    buildName: 'artifacttest',
+                    buildNumber: '10',
                 )
                //}
             }
@@ -53,7 +55,7 @@ pipeline {
                 rtPublishBuildInfo(
                     serverId: "techino",
                     buildName: "artifacttest",
-                    buildNumber: "${env.BUILD_NUMBER}"
+                    buildNumber: "10"
                     
                 )
             }
