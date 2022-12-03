@@ -34,11 +34,11 @@ pipeline {
                 //  server.upload(uploadSpec) 
                 rtUpload (
                     serverId: "techino",
-                    buildNumber: "${env.buildNumber}",
+                    // buildNumber: "${env.buildNumber}",
                     spec: """{
                         "files": [
                             {
-                            "pattern": "target/scala-2.12/*.jar",
+                            "pattern": "target/scala-3.2.1/*.jar",
                             "target": "artifacttest" 
                             }
                         ]
@@ -53,7 +53,7 @@ pipeline {
                 rtPublishBuildInfo(
                     serverId: "techino",
                     buildName: "artifacttest",
-                    buildNumber: "${buildNumber}"
+                    // buildNumber: "${buildNumber}"
                     
                 )
             }
